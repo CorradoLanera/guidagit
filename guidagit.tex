@@ -1004,7 +1004,7 @@ comando \texttt{git checkout -{}-} \meta{file} illustrato qui sopra.
 
 L'opzione \texttt{-{}-amend} del comando \texttt{git commit} permette di
 modificare l'ultimo \emph{commit}.  Se dopo aver salvato un \emph{commit} ci
-accorgiamo che dobbiamo correggerlo (per esempio perché ci siamo dimenticati
+accorgiamo che dobbiamo correggerlo (per esempio perché ci siamo dimenticati di
 apportare una modifica o di aggiungere un file), possiamo normalmente modificare
 i file di interesse, aggiungerli alla \emph{staging area} con il comando
 \texttt{git add} \meta{file}\footnote{Se ci si era dimenticati di aggiungere un
@@ -1219,7 +1219,7 @@ $ git branch
 * foo
   master
 \end{lstlisting}
-Che significa che ci siamo spostati in un altro \emph{branch}?  Abbiamo cambiato
+Che significa che ci siamo spostati in un altro \emph{branch}!  Abbiamo cambiato
 cartella?  No, siamo sempre nella stessa cartella (possiamo controllarlo con il
 comand \texttt{pwd}%è command o comando? e cos'è pwd?!
 ), ma è stato Git che ha modificato la nostra cartella di
@@ -1304,8 +1304,9 @@ Fast-forward
  1 files changed, 18 insertions(+), 0 deletions(-)
  create mode 100644 capitolo5.tex
 \end{lstlisting} %$
-Dopo di ciò possiamo normalmente fare il \emph{commit} con \texttt{git add .} e
-\texttt{git commit -m``}\meta{messaggio di commit}\texttt{''}.
+Dopo di ciò possiamo normalmente fare il \emph{commit} con \texttt{git add .} 
+(in quanto il \emph{merge}, di fatto, ha modificato alcuni file, che sono quindi da
+inserire nella \emph{staging area}) e poi \texttt{git commit -m``}\meta{messaggio di commit}\texttt{''} (registrando le modifiche all'interno del database).
 
 Può verificarsi un problema se uno o più file sono stati modificati nello stesso
 punto in tutti e due i rami che si vogliono fondere, dopo che è stato creato il
